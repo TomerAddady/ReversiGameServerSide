@@ -6,9 +6,15 @@
 #define SERVER_GETGAMESLISTCOMMAND_H
 
 #include "Command.h"
+#include "Server.h"
 class GetGamesListCommand : public Command {
-    virtual void execute(vector<string> args);
-    virtual ~GetGamesListCommand();
+    public:
+        GetGamesListCommand (Server * s);
+        virtual void execute(vector<string> args);
+        virtual ~GetGamesListCommand();
+
+    private:
+        Server * s;
 };
 
 

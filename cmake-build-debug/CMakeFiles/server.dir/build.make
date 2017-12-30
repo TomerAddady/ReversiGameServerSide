@@ -43,10 +43,10 @@ RM = /home/tomer/Desktop/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tomer/Documents/toSubmitLast/ex4/src/server
+CMAKE_SOURCE_DIR = /home/tomer/Documents/advancedProgramingExerises/src/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/server.dir/flags.make
 
 CMakeFiles/server.dir/main.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp
 
 CMakeFiles/server.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
 
 CMakeFiles/server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
 
 CMakeFiles/server.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/server.dir/main.cpp.o.provides.build: CMakeFiles/server.dir/main.cpp.
 
 CMakeFiles/server.dir/Server.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/Server.cpp.o: ../Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/Server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Server.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/Server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Server.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/Server.cpp
 
 CMakeFiles/server.dir/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/Server.cpp > CMakeFiles/server.dir/Server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/Server.cpp > CMakeFiles/server.dir/Server.cpp.i
 
 CMakeFiles/server.dir/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/Server.cpp -o CMakeFiles/server.dir/Server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/Server.cpp -o CMakeFiles/server.dir/Server.cpp.s
 
 CMakeFiles/server.dir/Server.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/server.dir/Server.cpp.o.provides.build: CMakeFiles/server.dir/Server.
 
 CMakeFiles/server.dir/StartCommand.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/StartCommand.cpp.o: ../StartCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/StartCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/StartCommand.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/StartCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/StartCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/StartCommand.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp
 
 CMakeFiles/server.dir/StartCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/StartCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/StartCommand.cpp > CMakeFiles/server.dir/StartCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp > CMakeFiles/server.dir/StartCommand.cpp.i
 
 CMakeFiles/server.dir/StartCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/StartCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/StartCommand.cpp -o CMakeFiles/server.dir/StartCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp -o CMakeFiles/server.dir/StartCommand.cpp.s
 
 CMakeFiles/server.dir/StartCommand.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/server.dir/StartCommand.cpp.o.provides.build: CMakeFiles/server.dir/S
 
 CMakeFiles/server.dir/JoinCommand.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/JoinCommand.cpp.o: ../JoinCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/JoinCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/JoinCommand.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/JoinCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/JoinCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/JoinCommand.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.cpp
 
 CMakeFiles/server.dir/JoinCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/JoinCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/JoinCommand.cpp > CMakeFiles/server.dir/JoinCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.cpp > CMakeFiles/server.dir/JoinCommand.cpp.i
 
 CMakeFiles/server.dir/JoinCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/JoinCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/JoinCommand.cpp -o CMakeFiles/server.dir/JoinCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.cpp -o CMakeFiles/server.dir/JoinCommand.cpp.s
 
 CMakeFiles/server.dir/JoinCommand.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/server.dir/JoinCommand.cpp.o.provides.build: CMakeFiles/server.dir/Jo
 
 CMakeFiles/server.dir/CloseCommand.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/CloseCommand.cpp.o: ../CloseCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/CloseCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/CloseCommand.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/CloseCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/CloseCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/CloseCommand.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.cpp
 
 CMakeFiles/server.dir/CloseCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/CloseCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/CloseCommand.cpp > CMakeFiles/server.dir/CloseCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.cpp > CMakeFiles/server.dir/CloseCommand.cpp.i
 
 CMakeFiles/server.dir/CloseCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/CloseCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/CloseCommand.cpp -o CMakeFiles/server.dir/CloseCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.cpp -o CMakeFiles/server.dir/CloseCommand.cpp.s
 
 CMakeFiles/server.dir/CloseCommand.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/server.dir/CloseCommand.cpp.o.provides.build: CMakeFiles/server.dir/C
 
 CMakeFiles/server.dir/PlayCommand.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/PlayCommand.cpp.o: ../PlayCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/PlayCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/PlayCommand.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/PlayCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/PlayCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/PlayCommand.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.cpp
 
 CMakeFiles/server.dir/PlayCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/PlayCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/PlayCommand.cpp > CMakeFiles/server.dir/PlayCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.cpp > CMakeFiles/server.dir/PlayCommand.cpp.i
 
 CMakeFiles/server.dir/PlayCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/PlayCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/PlayCommand.cpp -o CMakeFiles/server.dir/PlayCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.cpp -o CMakeFiles/server.dir/PlayCommand.cpp.s
 
 CMakeFiles/server.dir/PlayCommand.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/server.dir/PlayCommand.cpp.o.provides.build: CMakeFiles/server.dir/Pl
 
 CMakeFiles/server.dir/GetGamesListCommand.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/GetGamesListCommand.cpp.o: ../GetGamesListCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server.dir/GetGamesListCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/GetGamesListCommand.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/GetGamesListCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server.dir/GetGamesListCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/GetGamesListCommand.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.cpp
 
 CMakeFiles/server.dir/GetGamesListCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/GetGamesListCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/GetGamesListCommand.cpp > CMakeFiles/server.dir/GetGamesListCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.cpp > CMakeFiles/server.dir/GetGamesListCommand.cpp.i
 
 CMakeFiles/server.dir/GetGamesListCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/GetGamesListCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/GetGamesListCommand.cpp -o CMakeFiles/server.dir/GetGamesListCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.cpp -o CMakeFiles/server.dir/GetGamesListCommand.cpp.s
 
 CMakeFiles/server.dir/GetGamesListCommand.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/server.dir/GetGamesListCommand.cpp.o.provides.build: CMakeFiles/serve
 
 CMakeFiles/server.dir/CommandsManager.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/CommandsManager.cpp.o: ../CommandsManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server.dir/CommandsManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/CommandsManager.cpp.o -c /home/tomer/Documents/toSubmitLast/ex4/src/server/CommandsManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server.dir/CommandsManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/CommandsManager.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp
 
 CMakeFiles/server.dir/CommandsManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/CommandsManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/toSubmitLast/ex4/src/server/CommandsManager.cpp > CMakeFiles/server.dir/CommandsManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp > CMakeFiles/server.dir/CommandsManager.cpp.i
 
 CMakeFiles/server.dir/CommandsManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/CommandsManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/toSubmitLast/ex4/src/server/CommandsManager.cpp -o CMakeFiles/server.dir/CommandsManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp -o CMakeFiles/server.dir/CommandsManager.cpp.s
 
 CMakeFiles/server.dir/CommandsManager.cpp.o.requires:
 
@@ -249,6 +249,54 @@ CMakeFiles/server.dir/CommandsManager.cpp.o.provides: CMakeFiles/server.dir/Comm
 CMakeFiles/server.dir/CommandsManager.cpp.o.provides.build: CMakeFiles/server.dir/CommandsManager.cpp.o
 
 
+CMakeFiles/server.dir/Game_Room.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/Game_Room.cpp.o: ../Game_Room.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/server.dir/Game_Room.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Game_Room.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp
+
+CMakeFiles/server.dir/Game_Room.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Game_Room.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp > CMakeFiles/server.dir/Game_Room.cpp.i
+
+CMakeFiles/server.dir/Game_Room.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Game_Room.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp -o CMakeFiles/server.dir/Game_Room.cpp.s
+
+CMakeFiles/server.dir/Game_Room.cpp.o.requires:
+
+.PHONY : CMakeFiles/server.dir/Game_Room.cpp.o.requires
+
+CMakeFiles/server.dir/Game_Room.cpp.o.provides: CMakeFiles/server.dir/Game_Room.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Game_Room.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/Game_Room.cpp.o.provides
+
+CMakeFiles/server.dir/Game_Room.cpp.o.provides.build: CMakeFiles/server.dir/Game_Room.cpp.o
+
+
+CMakeFiles/server.dir/GameManager.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/GameManager.cpp.o: ../GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/server.dir/GameManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/GameManager.cpp.o -c /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp
+
+CMakeFiles/server.dir/GameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/GameManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp > CMakeFiles/server.dir/GameManager.cpp.i
+
+CMakeFiles/server.dir/GameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/GameManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp -o CMakeFiles/server.dir/GameManager.cpp.s
+
+CMakeFiles/server.dir/GameManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/server.dir/GameManager.cpp.o.requires
+
+CMakeFiles/server.dir/GameManager.cpp.o.provides: CMakeFiles/server.dir/GameManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/GameManager.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/GameManager.cpp.o.provides
+
+CMakeFiles/server.dir/GameManager.cpp.o.provides.build: CMakeFiles/server.dir/GameManager.cpp.o
+
+
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/main.cpp.o" \
@@ -258,7 +306,9 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/CloseCommand.cpp.o" \
 "CMakeFiles/server.dir/PlayCommand.cpp.o" \
 "CMakeFiles/server.dir/GetGamesListCommand.cpp.o" \
-"CMakeFiles/server.dir/CommandsManager.cpp.o"
+"CMakeFiles/server.dir/CommandsManager.cpp.o" \
+"CMakeFiles/server.dir/Game_Room.cpp.o" \
+"CMakeFiles/server.dir/GameManager.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -271,9 +321,11 @@ server: CMakeFiles/server.dir/CloseCommand.cpp.o
 server: CMakeFiles/server.dir/PlayCommand.cpp.o
 server: CMakeFiles/server.dir/GetGamesListCommand.cpp.o
 server: CMakeFiles/server.dir/CommandsManager.cpp.o
+server: CMakeFiles/server.dir/Game_Room.cpp.o
+server: CMakeFiles/server.dir/GameManager.cpp.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -289,6 +341,8 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/CloseCommand.cpp.o.require
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/PlayCommand.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/GetGamesListCommand.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/CommandsManager.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/Game_Room.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/GameManager.cpp.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 
@@ -297,6 +351,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tomer/Documents/toSubmitLast/ex4/src/server /home/tomer/Documents/toSubmitLast/ex4/src/server /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tomer/Documents/advancedProgramingExerises/src/server /home/tomer/Documents/advancedProgramingExerises/src/server /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 

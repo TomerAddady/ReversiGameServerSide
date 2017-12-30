@@ -3,8 +3,6 @@
 //
 
 #include "Server.h"
-
-
 #include <poll.h>
 #include <sys/socket.h>
 #include<netinet/in.h>
@@ -13,6 +11,8 @@
 #include<iostream>
 #include<stdio.h>
 #include <arpa/inet.h>
+#include <sstream>
+#include "CommandsManager.h"
 //#include "unistd.h"
 //#include "arpa/inet.h"
 using namespace std;
@@ -22,11 +22,12 @@ using namespace std;
  * @param port - we get number of the port.
  */
 Server::Server(int port): port(port), serverSocket(0) {
-    this->commands_Manager_ = new CommandsManager();
+   // this->commands_Manager_ = new CommandsManager();
     cout << "Server" << endl;
+    //this->shuoldRun = true;
 }
 Server :: ~Server() {
-    delete(this->commands_Manager_);
+    //delete(this->commands_Manager_);
 
 }
 
@@ -54,6 +55,10 @@ void Server::start() {
 
     listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
+    pthread_t exitThread;
+    this->projectThreads.push_back(&exitThread); // adding the thread to server treads vector.
+    pthread_create(&exitThread, NULL, waitTillExit, (void *)this);
+
     while (true) {
 
         struct sockaddr_in client;
@@ -62,9 +67,15 @@ void Server::start() {
 
         cout << "Waiting for client connections..." << endl;
         int clientSocket = accept(serverSocket, (struct sockaddr *) &client, &clienLen);
-        pthread_t threads;
-        pthread_create(&threads, NULL, handleClient, (void *)clientSocket);
 
+        connectioObj *s = new connectioObj();
+        s->sd = clientSocket;
+        s->server = this;
+
+
+        pthread_t threads;
+        this->projectThreads.push_back(&threads); // adding the thread to server treads vector.
+        pthread_create(&threads, NULL, handleClient, (void *)s);
     }
     //the older implemntion of the function loop,
     /**     OLDER FROM EX4
@@ -153,10 +164,101 @@ void Server::start() {
 
 }*/
 }
-void * Server :: handleClient  (void * clientSocket) {
+
+void * Server ::waitTillExit(void *obj) {
+    Server *s = (Server *) obj;
+    string command = "";
+    while (command != "exit") {
+        cin >> command;
+    }
+
+    cout << "kill all threads:" << endl;
+    // close all threads
+    //pthread_mutex_lock(&threads_mutex);
+    s->Killthreads();
+    //pthread_mutex_unlock(&threads_mutex);
+
+    // close all game rooms
+    vector<string> args;
+    args.push_back("");
+    //CommandsManager commandsManager(this);
+    //commandsManager.executeCommand("close_server", args);
 
 
+   // this->shuoldRun = false;
 
+}
+int Server::Killthreads() {
+    for (vector<pthread_t *>::iterator it = this->projectThreads.begin();
+         it != this->projectThreads.end(); it++) {
+            pthread_cancel(**it);
+    }
+}
+void Server :: closeConnection(int sd) {
+    close(sd);
+}
+int Server :: writeTo(int sd, const string& msg) {
+
+    char buffer [BUFFER_SIZE];
+    int  i;
+    for (i = 0; i < msg.size(); i++) {
+        buffer[i] = msg [i];
+    }
+    buffer[i] = '\0';
+
+    int res = write(sd, buffer, BUFFER_SIZE);
+    if (res == -1) {
+        throw "Error on writing";
+    }
+    if (res == 0) {
+        throw "Error client disconnected";
+    }
+
+}
+int Server :: ReadFrom(int sd, char * buffer) {
+
+
+    int res = read(sd, buffer, BUFFER_SIZE);
+    if (res == -1) {
+        throw "Error on writing";
+    }
+    if (res == 0) {
+        throw "Error client disconnected";
+    }
+}
+
+
+void * Server :: handleClient  (void * clientObj) {
+
+
+    char buffer[BUFFER_SIZE];
+    int bytes;
+    connectioObj * s = (connectioObj*) clientObj;
+    //bytes = read(s->sd, buffer, sizeof(buffer));
+    try {
+        s->server->ReadFrom(s->sd, buffer);
+    } catch (const char * string1) {
+
+    }
+    CommandsManager commandsManager (s->server);
+
+
+    std::string str(buffer);
+    int index = str.find(" ");
+    string str1 = str.substr(0, index);
+    string str2 = str.substr(index + 1);
+    vector <string> as ;
+
+    stringstream s1;
+    s1 << s->sd;
+    string st = s1.str();
+
+    as.push_back(st); // socket descriptor in string.
+    as.push_back(str2); // name of game.
+
+    commandsManager.executeCommand(str1, as);
+    pthread_exit(NULL);
+    //s->server->commands_Manager_->executeCommand(str1, as);
 
     //older possible implemention of handle client
     /**

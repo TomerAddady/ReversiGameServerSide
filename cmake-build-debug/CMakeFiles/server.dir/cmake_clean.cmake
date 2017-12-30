@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/PlayCommand.cpp.o"
   "CMakeFiles/server.dir/GetGamesListCommand.cpp.o"
   "CMakeFiles/server.dir/CommandsManager.cpp.o"
+  "CMakeFiles/server.dir/Game_Room.cpp.o"
+  "CMakeFiles/server.dir/GameManager.cpp.o"
   "server.pdb"
   "server"
 )

@@ -48,10 +48,10 @@ RM = /home/tomer/Desktop/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tomer/Documents/toSubmitLast/ex4/src/server
+CMAKE_SOURCE_DIR = /home/tomer/Documents/advancedProgramingExerises/src/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,60 @@ CommandsManager.s: CommandsManager.cpp.s
 CommandsManager.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/CommandsManager.cpp.s
 .PHONY : CommandsManager.cpp.s
+
+GameManager.o: GameManager.cpp.o
+
+.PHONY : GameManager.o
+
+# target to build an object file
+GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/GameManager.cpp.o
+.PHONY : GameManager.cpp.o
+
+GameManager.i: GameManager.cpp.i
+
+.PHONY : GameManager.i
+
+# target to preprocess a source file
+GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/GameManager.cpp.i
+.PHONY : GameManager.cpp.i
+
+GameManager.s: GameManager.cpp.s
+
+.PHONY : GameManager.s
+
+# target to generate assembly for a file
+GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/GameManager.cpp.s
+.PHONY : GameManager.cpp.s
+
+Game_Room.o: Game_Room.cpp.o
+
+.PHONY : Game_Room.o
+
+# target to build an object file
+Game_Room.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Game_Room.cpp.o
+.PHONY : Game_Room.cpp.o
+
+Game_Room.i: Game_Room.cpp.i
+
+.PHONY : Game_Room.i
+
+# target to preprocess a source file
+Game_Room.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Game_Room.cpp.i
+.PHONY : Game_Room.cpp.i
+
+Game_Room.s: Game_Room.cpp.s
+
+.PHONY : Game_Room.s
+
+# target to generate assembly for a file
+Game_Room.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Game_Room.cpp.s
+.PHONY : Game_Room.cpp.s
 
 GetGamesListCommand.o: GetGamesListCommand.cpp.o
 
@@ -354,6 +408,12 @@ help:
 	@echo "... CommandsManager.o"
 	@echo "... CommandsManager.i"
 	@echo "... CommandsManager.s"
+	@echo "... GameManager.o"
+	@echo "... GameManager.i"
+	@echo "... GameManager.s"
+	@echo "... Game_Room.o"
+	@echo "... Game_Room.i"
+	@echo "... Game_Room.s"
 	@echo "... GetGamesListCommand.o"
 	@echo "... GetGamesListCommand.i"
 	@echo "... GetGamesListCommand.s"

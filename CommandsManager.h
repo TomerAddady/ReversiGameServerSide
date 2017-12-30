@@ -7,11 +7,12 @@
 
 #include <map>
 #include "Command.h"
+#include "Server.h"
 using namespace std;
 
 class CommandsManager {
     public:
-    CommandsManager();
+    CommandsManager(Server * s);
     ~CommandsManager();
     void executeCommand(string command, vector<string> args);
     private:

@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug"/>
+				<Option working_dir="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug"/>
+				<Option working_dir="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug"/>
+				<Option working_dir="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="server">
-				<Option output="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug"/>
+				<Option output="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="server/fast">
-				<Option output="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug"/>
+				<Option output="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,62 +77,74 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/CloseCommand.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/CloseCommand.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/Command.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Command.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/CommandsManager.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/CommandsManager.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/GetGamesListCommand.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/GetGamesListCommand.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/JoinCommand.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/JoinCommand.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/PlayCommand.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/PlayCommand.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/Server.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/Server.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/StartCommand.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/StartCommand.h">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/main.cpp">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Server.cpp">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/tomer/Documents/toSubmitLast/ex4/src/server/CMakeLists.txt">
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Server.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

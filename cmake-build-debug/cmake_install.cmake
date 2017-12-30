@@ -1,4 +1,4 @@
-# Install script for directory: /home/tomer/Documents/toSubmitLast/ex4/src/server
+# Install script for directory: /home/tomer/Documents/advancedProgramingExerises/src/server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tomer/Documents/toSubmitLast/ex4/src/server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

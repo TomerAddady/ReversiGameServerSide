@@ -5,7 +5,7 @@
 #include<iostream>
 #include<stdlib.h>
 #include <fstream>
-
+#include "GameManager.h"
 using namespace std;
 using namespace std;
 
@@ -20,6 +20,7 @@ int  main(int argc, char ** argv) {
 
 
     Server  server(port);
+    GameManager * gameManager = GameManager :: getInstance();
     //Server server(9000);
     try {
         server.start();

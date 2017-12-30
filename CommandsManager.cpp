@@ -9,12 +9,12 @@
 #include "CloseCommand.h"
 #include "PlayCommand.h"
 
-CommandsManager::CommandsManager() {
+CommandsManager::CommandsManager(Server * s) {
 
-    commandsMap["start"] = new StartCommand();
-    commandsMap["join"] = new JoinCommand();
-    commandsMap["list_games"] = new GetGamesListCommand();
-    commandsMap["close"] = new CloseCommand();
+    commandsMap["start"] = new StartCommand(s);
+    commandsMap["join"] = new JoinCommand(s);
+    commandsMap["list_games"] = new GetGamesListCommand(s);
+    commandsMap["close"] = new CloseCommand(s);
     commandsMap["play"] = new PlayCommand();
 }
 
