@@ -28,10 +28,15 @@ void * Game_Room::manageTheGame (void * game_obj) {
     Server * s = gameObj->server;
     int firstPlayerSD = gameObj->gameRoom->getFirstPlayerSock();
     int secondPlayerSD = gameObj->gameRoom->getSecondPlayerSock();
+    cout<< "write"<<endl;
     try {
-        s->writeTo(firstPlayerSD, "first"); // telling the first player that he is the first (he is x)
+        s->writeTo(firstPlayerSD, "first");
+        cout << "now were writing for the first";
+        // telling the first player that he is the first (he is x)
         s->writeTo(secondPlayerSD, "second"); //telling the second player that he is the second (he is o)
+
     } catch (char * s) {
+        cout << "now were catch for the first";
 
     }
     char buffer [BUFFER_SIZE];
@@ -85,7 +90,7 @@ void * Game_Room::manageTheGame (void * game_obj) {
 
 void Game_Room :: JoinThegame(int s, Server * server) {
     try {
-        server->writeTo(this->getFirstPlayerSock(), "first");
+        //server->writeTo(this->getFirstPlayerSock(), "first");
     } catch (const char * x) {
 
     }

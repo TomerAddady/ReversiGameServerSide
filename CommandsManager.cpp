@@ -13,7 +13,7 @@ CommandsManager::CommandsManager(Server * s) {
 
     commandsMap["start"] = new StartCommand(s);
     commandsMap["join"] = new JoinCommand(s);
-    commandsMap["list_games"] = new GetGamesListCommand(s);
+    commandsMap["list_gam"] = new GetGamesListCommand(s);
     commandsMap["close"] = new CloseCommand(s);
     commandsMap["play"] = new PlayCommand();
 }

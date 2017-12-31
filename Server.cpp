@@ -217,10 +217,9 @@ int Server :: writeTo(int sd, const string& msg) {
 }
 int Server :: ReadFrom(int sd, char * buffer) {
 
-
     int res = read(sd, buffer, BUFFER_SIZE);
     if (res == -1) {
-        throw "Error on writing";
+        throw "Error on reading";
     }
     if (res == 0) {
         throw "Error client disconnected";

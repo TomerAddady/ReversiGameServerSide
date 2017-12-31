@@ -21,6 +21,7 @@ void StartCommand :: execute(vector<string> args) {
     GameManager * gm = GameManager :: getInstance();
 
     Game_Room* g = new Game_Room(sd, gameName);
+    cout << gameName << "\n";
     int res = gm->addGame(g,gameName);
     if (res == 1) {
         try {

@@ -24,14 +24,15 @@ void GetGamesListCommand :: execute(vector<string> args) {
     // for all names write them to the client.
     for (vector <string> :: iterator iterator1 = s.begin(); iterator1 != s.end(); iterator1++ ) {
         try {
-            this->s->writeTo(sd , *iterator1);
+            this->s->writeTo(sd , (*iterator1).c_str());
 
         } catch (const char * c) {
             this->s->closeConnection(sd);
             return;
         }
     }
-    string s1 = "endLoop";
+    char* s1 = "endLoop";
+
     this->s->writeTo(sd , s1);
     this->s->closeConnection(sd);// close connection after sending answer.
 }

@@ -12,6 +12,7 @@ pthread_mutex_t ConstractMutex;
 Game_Room * GameManager :: GetGameByName (string& s) {
     pthread_mutex_lock(&GameMangerMapMutex);
     if (this->map1.count(s) > 0) {
+        pthread_mutex_unlock(&GameMangerMapMutex);
         return  this->map1[s];
     }
     pthread_mutex_unlock(&GameMangerMapMutex);

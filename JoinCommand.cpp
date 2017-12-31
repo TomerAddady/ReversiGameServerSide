@@ -11,14 +11,17 @@ JoinCommand :: JoinCommand(Server * server) {
 void JoinCommand :: execute(vector<string> args) {
     int sd;
     string s = args.at(0); // socket descriptor at 0 and name at 1.
-    cout << "im in start" << endl ;
+    cout << "im in join1" << endl;
+    cout << s << endl;
     istringstream istringstream1(s);
     istringstream1 >> sd;
     string name = args.at(1);
     GameManager * gm = GameManager :: getInstance();
+
     Game_Room * game_room = gm->GetGameByName(name);
     // if aroom requsted is not exist or already taken.
     if (game_room == NULL || game_room->getStatus() == 1) {
+        cout << "get in the if"<<endl;
         try {
             this->s->writeTo(sd, "-1");
         }  catch (const char *message) {
@@ -35,6 +38,7 @@ void JoinCommand :: execute(vector<string> args) {
             this->s->closeConnection(sd);
             return;
         }*/
+
         game_room->JoinThegame(sd, this->s);
         GameObj * parToGame = new GameObj;
         parToGame->gameRoom = game_room;
