@@ -15,9 +15,11 @@ GetGamesListCommand :: ~GetGamesListCommand() {
 }
 
 void GetGamesListCommand :: execute(vector<string> args) {
+    cout << "innnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" << endl;
     int sd;
     istringstream istringstream1(args.at(0));
     istringstream1 >> sd;
+    cout << sd << endl;
     GameManager * gameManager = GameManager :: getInstance();
     vector <string> s = gameManager->GetNames();
 

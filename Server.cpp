@@ -17,6 +17,9 @@
 //#include "arpa/inet.h"
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
+pthread_mutex_t ListOfThreadsMutex;
+
+
 /**
  * Constractor.
  * @param port - we get number of the port.
@@ -24,21 +27,43 @@ using namespace std;
 Server::Server(int port): port(port), serverSocket(0) {
    // this->commands_Manager_ = new CommandsManager();
     cout << "Server" << endl;
-    //this->shuoldRun = true;
+    this->shuoldRun = true;
 }
 Server :: ~Server() {
     //delete(this->commands_Manager_);
 
 }
 
+void Server::run() {
+
+    pthread_t startThread;
+    this->projectThreads.push_back(&startThread);
+    pthread_create(&startThread, NULL, start, (void *)this);
+
+    string command = "";
+    while (command != "exit") {
+        cin >> command;
+    }
+
+    cout << "kill all threads:" << endl;
+    // close all threads
+    //pthread_mutex_lock(&threads_mutex);
+    this->Killthreads();
+
+    //pthread_mutex_unlock(&threads_mutex);
+
+}
 
 /**
  * Start the server.
  */
-void Server::start() {
+void *Server::start(void * clientObj) {
+    cout << "in"<< endl;
+    Server *s = (Server *) clientObj;
     // Create a socket point
-    serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (serverSocket == -1) {
+
+    s->serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (s->serverSocket == -1) {
         throw ("error while creating socket!");
     }
     // Assign a local address to the socket
@@ -47,17 +72,17 @@ void Server::start() {
 
     serverAddress.sin_family = AF_INET;
     serverAddress.sin_addr.s_addr = INADDR_ANY;
-    serverAddress.sin_port = htons(port);
+    serverAddress.sin_port = htons(s->port);
 
-    if (bind(serverSocket, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) < 0) {
+    if (bind(s->serverSocket, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) < 0) {
         throw "Error on binding";
     }
 
-    listen(serverSocket, MAX_CONNECTED_CLIENTS);
+    listen(s->serverSocket, MAX_CONNECTED_CLIENTS);
 
-    pthread_t exitThread;
-    this->projectThreads.push_back(&exitThread); // adding the thread to server treads vector.
-    pthread_create(&exitThread, NULL, waitTillExit, (void *)this);
+    //pthread_t exitThread;
+    //s->projectThreads.push_back(&exitThread); // adding the thread to server treads vector.
+    //pthread_create(&exitThread, NULL, waitTillExit, (void *)s);
 
     while (true) {
 
@@ -66,16 +91,16 @@ void Server::start() {
 
 
         cout << "Waiting for client connections..." << endl;
-        int clientSocket = accept(serverSocket, (struct sockaddr *) &client, &clienLen);
+        int clientSocket = accept(s->serverSocket, (struct sockaddr *) &client, &clienLen);
 
-        connectioObj *s = new connectioObj();
-        s->sd = clientSocket;
-        s->server = this;
+        connectioObj *s1 = new connectioObj();
+        s1->sd = clientSocket;
+        s1->server = s;
 
 
         pthread_t threads;
-        this->projectThreads.push_back(&threads); // adding the thread to server treads vector.
-        pthread_create(&threads, NULL, handleClient, (void *)s);
+        s->projectThreads.push_back(&threads); // adding the thread to server treads vector.
+        pthread_create(&threads, NULL, handleClient, (void *)s1);
     }
     //the older implemntion of the function loop,
     /**     OLDER FROM EX4
@@ -165,6 +190,7 @@ void Server::start() {
 }*/
 }
 
+/*
 void * Server ::waitTillExit(void *obj) {
     Server *s = (Server *) obj;
     string command = "";
@@ -187,12 +213,15 @@ void * Server ::waitTillExit(void *obj) {
 
    // this->shuoldRun = false;
 
-}
+}*/
 int Server::Killthreads() {
+    pthread_mutex_lock(&ListOfThreadsMutex);
     for (vector<pthread_t *>::iterator it = this->projectThreads.begin();
          it != this->projectThreads.end(); it++) {
+            cout << "kill thread" << endl;
             pthread_cancel(**it);
     }
+    pthread_mutex_unlock(&ListOfThreadsMutex);
 }
 void Server :: closeConnection(int sd) {
     close(sd);
@@ -243,6 +272,7 @@ void * Server :: handleClient  (void * clientObj) {
 
 
     std::string str(buffer);
+    cout << buffer << endl;
     int index = str.find(" ");
     string str1 = str.substr(0, index);
     string str2 = str.substr(index + 1);

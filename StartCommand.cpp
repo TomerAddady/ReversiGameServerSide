@@ -19,9 +19,9 @@ void StartCommand :: execute(vector<string> args) {
     istringstream1 >> sd;
     gameName = args.at(1);
     GameManager * gm = GameManager :: getInstance();
-
+    cout << "in start game name is : "<< gameName << endl;
     Game_Room* g = new Game_Room(sd, gameName);
-    cout << gameName << "\n";
+   // cout << gameName << "\n";
     int res = gm->addGame(g,gameName);
     if (res == 1) {
         try {

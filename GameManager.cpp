@@ -43,7 +43,9 @@ int GameManager ::removeGame(string name) {
 vector<string> GameManager:: GetNames () {
     vector <string> s;
     pthread_mutex_lock(&GameMangerMapMutex);
+    cout << "Game Manager list of names:" << endl;
     for (std::map<string, Game_Room*>::iterator it=this->map1.begin(); it!=this->map1.end(); ++it) {
+        cout << it->first << endl;
         s.push_back(it->first);
     }
     pthread_mutex_unlock(&GameMangerMapMutex);
@@ -60,6 +62,7 @@ int GameManager::addGame(Game_Room  *game_room, string str) {
             return  -1;
         }
     }
+    cout <<"adding game named: " << str << endl;
     map1[str] = game_room;
     pthread_mutex_unlock(&GameMangerMapMutex);
 

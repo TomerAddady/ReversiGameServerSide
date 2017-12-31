@@ -23,7 +23,8 @@ int  main(int argc, char ** argv) {
     GameManager * gameManager = GameManager :: getInstance();
     //Server server(9000);
     try {
-        server.start();
+        server.run();
+        //server.start();
     } catch (const char *msg) {
         cout << "Cannot start server. Reason: " << msg << endl;
         exit(-1);
