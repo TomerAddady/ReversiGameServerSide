@@ -47,6 +47,7 @@ void * Game_Room::manageTheGame (void * game_obj) {
             //bytes = read(clientSocket1, buffer, sizeof(buffer));
             try {
                 s->ReadFrom(firstPlayerSD, buffer);
+                if (strcmp(buffer , "close") == 0) { break; }
             } catch (const char * x) {
                 endFlag = true;
                 continue;
@@ -63,6 +64,8 @@ void * Game_Room::manageTheGame (void * game_obj) {
         } else {
             try {
                 s->ReadFrom(secondPlayerSD, buffer);
+                if (strcmp(buffer , "close") == 0) { break; }
+
             } catch (const char * x) {
                 endFlag = true;
                 continue;

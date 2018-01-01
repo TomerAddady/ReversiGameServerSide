@@ -26,11 +26,14 @@ void StartCommand :: execute(vector<string> args) {
     if (res == 1) {
         try {
             string s = "waiting";
+            cout << "sending s \n";
             this->s->writeTo(sd, s);
         } catch (const char * string1) {
 
         }
     } else if (res == -1) {
+        string s = "-1";
+        this->s->writeTo(sd , s);
         this->s->closeConnection(sd);
     }
 }
