@@ -8,20 +8,35 @@
 #include "CommandsManager.h"
 #include "GameManager.h"
 
+/**
+ * constractor.
+ * @param s1 first member socket.
+ * @param name name of the game.
+ */
 Game_Room :: Game_Room(int s1, string name) {
     this->Firstsock = s1;
     this->name_ = name;
     this->status = 0; // game not active yet.
-    //this->Secondsock = s2;
 }
 
-
+/**
+ * @return the current thread.
+ */
 pthread_t* Game_Room::getThread() const {
     this->thread_;
 }
+/**
+ * @return the room name.
+ */
 string Game_Room::getName() const  {
     return this->name_;
 }
+
+/**
+ * managing the game flow.
+ * @param game_obj the game obj is a struct that contains parameters for the game.
+ * @return .
+ */
 void * Game_Room::manageTheGame (void * game_obj) {
     GameObj * gameObj = (GameObj *) game_obj;
     Game_Room * gr = gameObj->gameRoom;
@@ -84,29 +99,32 @@ void * Game_Room::manageTheGame (void * game_obj) {
     nameVec.push_back(gr->getName());
 
     commandsManager->executeCommand("close", nameVec);
-    //GameManager *gameRoomsController = GameManager::getInstance();
-    // removing and deliting this game from the list.
-    //gameRoomsController->removeGame(gr->getName());
-//    pthread_exit(NULL); // close the older pthread.
 
 }
-
+/**
+ * The other player (socket) joining.
+ * @param s socket.
+ * @param server the server.
+ */
 void Game_Room :: JoinThegame(int s, Server * server) {
-    try {
-        //server->writeTo(this->getFirstPlayerSock(), "first");
-    } catch (const char * x) {
-
-    }
     this->Secondsock = s;
-
     this->status = 1; // game is active now.
 }
+/**
+ * @return first socket.
+ */
 int Game_Room :: getFirstPlayerSock() {
     return this->Firstsock;
 }
+/**
+ * @return second socket.
+ */
 int Game_Room :: getSecondPlayerSock() {
     return this->Secondsock;
 }
+/**
+ * @return the game status.
+ */
 int Game_Room :: getStatus() {
     return this->status;
 }

@@ -8,7 +8,10 @@
 #include "GetGamesListCommand.h"
 #include "CloseCommand.h"
 #include "PlayCommand.h"
-
+/**
+ * creating the optional commands.
+ * @param s server.
+ */
 CommandsManager::CommandsManager(Server * s) {
 
     commandsMap["start"] = new StartCommand(s);
@@ -19,14 +22,20 @@ CommandsManager::CommandsManager(Server * s) {
     commandsMap["exit"] = new CloseTheGames(s);
 
 }
-
+/**
+ * destractor.
+ */
 CommandsManager::~CommandsManager() {
     map<string, Command *>::iterator it;
     for (it = commandsMap.begin(); it != commandsMap.end(); it++) {
         delete it->second;
     }
 }
-
+/**
+ * executing the requested command.
+ * @param command command to execute.
+ * @param args parmeters.
+ */
 void CommandsManager::executeCommand(string command, vector<string> args) {
     cout << "executing the command: "<< command << endl;
     Command *commandObj = commandsMap[command];

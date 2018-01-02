@@ -34,9 +34,10 @@ Server :: ~Server() {
 
 }
 
+/**
+ * runing the server listening to exit command.
+ */
 void Server::run() {
-
-
 
     this->serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (this->serverSocket == -1) {
@@ -56,11 +57,16 @@ void Server::run() {
 
     listen(this->serverSocket, MAX_CONNECTED_CLIENTS);
 
+    /**
+     * creating a thread for accept loop.
+     */
     pthread_t startThread;
     this->projectThreads.push_back(&startThread);
     pthread_create(&startThread, NULL, start, (void *)this);
 
-
+    /**
+     * listening to exit commang from command line.
+     */
     string command = "";
     while (command != "exit") {
         cin >> command;
@@ -70,19 +76,22 @@ void Server::run() {
 
 }
 
-
+/**
+ * closing the server nicely.
+ * @return
+ */
 int Server ::closeServer() {
     CommandsManager commandsManager (this);
     vector <string> vec1;
     commandsManager.executeCommand("exit",vec1);
     close(this->serverSocket);
     this->Killthreads();
+    return 1;
 }
 /**
  * Start the server.
  */
 void *Server::start(void * clientObj) {
-    cout << "in"<< endl;
     Server *s = (Server *) clientObj;
     // Create a socket point
 /*
@@ -108,11 +117,13 @@ void *Server::start(void * clientObj) {
     //s->projectThreads.push_back(&exitThread); // adding the thread to server treads vector.
     //pthread_create(&exitThread, NULL, waitTillExit, (void *)s);
 
+    /**
+     * loop of accept.
+     */
+    struct sockaddr_in client;
+    socklen_t clienLen = sizeof((struct sockaddr *)&client);
+
     while (true) {
-
-        struct sockaddr_in client;
-        socklen_t clienLen;
-
 
         cout << "Waiting for client connections..." << endl;
         int clientSocket = accept(s->serverSocket, (struct sockaddr *) &client, &clienLen);
@@ -121,123 +132,19 @@ void *Server::start(void * clientObj) {
         s1->sd = clientSocket;
         s1->server = s;
 
-
+        /*
+         * thread for handeling the accept that just arrived.
+         */
         pthread_t threads;
         s->projectThreads.push_back(&threads); // adding the thread to server treads vector.
         pthread_create(&threads, NULL, handleClient, (void *)s1);
     }
-    //the older implemntion of the function loop,
-    /**     OLDER FROM EX4
-    while (true) {
-        struct sockaddr_in client1;
-        struct sockaddr_in client2;
-        socklen_t clien1Len;
-        socklen_t clien2Len;
-        //create first.
-        char buff[] = "first";
-        cout << "Waiting for client connections..." << endl;
-        int clientSocket1 = accept(serverSocket, (struct sockaddr *) &client1, &clien1Len);
-        //send wait to the first client for waiting to connect 2.
-        cout << clientSocket1 << endl;
-        int sentbytes = write(clientSocket1, "waiting", 100);
-        cout << "Wrote waiting" << endl;
 
-        if (sentbytes < 0) {
-            throw "Error on sending";
-        }
-        int clientSocket2 = accept(serverSocket, (struct sockaddr *) &client2, &clien2Len);
-        sentbytes = write(clientSocket1, "first", 100);
-        if (sentbytes < 0) {
-            throw "Error on sending";
-        }
-        sentbytes = write(clientSocket2, "second", 100);
-        if (sentbytes < 0) {
-            throw "Error on sending";
-        }
-
-        /*int sentbytes = write(clientSocket1, "first", 4096);
-        if (sentbytes < 0) {
-            throw "Error on sending";
-        }
-        unsigned int size = sizeof(struct sockaddr_in);
-        char buffer[4096];
-        bzero((void *) &buffer, sizeof(buffer));
-        //int arg1;
-        int bytes;
-
-        int i = 2;
-        bool endFlag = false;
-        while (!endFlag) {
-            if (i % 2 == 0) {
-                bytes = read(clientSocket1, buffer, sizeof(buffer));
-                endFlag = isClosed(bytes);
-                if (strcmp(buffer, "END") != 0 && !endFlag) {
-                    if (strcmp(buffer, "no_available_moves") != 0) {
-                        sentbytes = write(clientSocket2, buffer, sizeof(buffer));
-                        endFlag = isClosed(sentbytes);
-                        bzero((void *) &buffer, sizeof(buffer));
-                    } else {
-                        i++;
-                        continue;
-                    }
-                } else {
-                    endFlag = true;
-                }
-            } else {
-                bytes = read(clientSocket2, buffer, sizeof(buffer));
-                endFlag = isClosed(bytes);
-
-                if (strcmp(buffer, "END") != 0 && !endFlag) {
-                    if (strcmp(buffer, "no_available_moves") != 0) {
-                        sentbytes = write(clientSocket1, buffer, sizeof(buffer));
-                        endFlag = isClosed(sentbytes);
-
-                        bzero((void *) &buffer, sizeof(buffer));
-                    } else {
-                        i++;
-                        continue;
-                    }
-                } else {
-                    endFlag = true;
-                }
-            }
-            //bzero((void *)&buffer, sizeof(buffer));
-
-            i++;
-        }
-        cout << "end of game!"<< endl;
-    //    delete(buff);
-    }
-    close(serverSocket);
-    cout << "out of prog";
-
-}*/
 }
 
 /*
-void * Server ::waitTillExit(void *obj) {
-    Server *s = (Server *) obj;
-    string command = "";
-    while (command != "exit") {
-        cin >> command;
-    }
-
-    cout << "kill all threads:" << endl;
-    // close all threads
-    //pthread_mutex_lock(&threads_mutex);
-    s->Killthreads();
-    //pthread_mutex_unlock(&threads_mutex);
-
-    // close all game rooms
-    vector<string> args;
-    args.push_back("");
-    //CommandsManager commandsManager(this);
-    //commandsManager.executeCommand("close_server", args);
-
-
-   // this->shuoldRun = false;
-
-}*/
+ * closing all the threads.
+ */
 int Server::Killthreads() {
     pthread_mutex_lock(&ListOfThreadsMutex);
     for (vector<pthread_t *>::iterator it = this->projectThreads.begin();
@@ -247,9 +154,18 @@ int Server::Killthreads() {
     }
     pthread_mutex_unlock(&ListOfThreadsMutex);
 }
+/*
+ * closing connction with the requested client.
+ */
 void Server :: closeConnection(int sd) {
     close(sd);
 }
+/**
+ * writing message to the client/
+ * @param sd clien to write.
+ * @param msg message.
+ * @return result of writing.
+ */
 int Server :: writeTo(int sd, const string& msg) {
 
     char buffer [BUFFER_SIZE];
@@ -268,6 +184,12 @@ int Server :: writeTo(int sd, const string& msg) {
     }
 
 }
+/**
+ * reading from client.
+ * @param sd clien to read from.
+ * @param buffer to write the message in.
+ * @return result.
+ */
 int Server :: ReadFrom(int sd, char * buffer) {
 
     int res = read(sd, buffer, BUFFER_SIZE);
@@ -279,7 +201,11 @@ int Server :: ReadFrom(int sd, char * buffer) {
     }
 }
 
-
+/**
+ * calling the command requsted.
+ * @param clientObj
+ * @return
+ */
 void * Server :: handleClient  (void * clientObj) {
 
 
@@ -290,13 +216,14 @@ void * Server :: handleClient  (void * clientObj) {
     try {
         s->server->ReadFrom(s->sd, buffer);
     } catch (const char * string1) {
-
+        cout << "failed to read from client." << endl;
+        pthread_exit(NULL);
     }
     CommandsManager commandsManager (s->server);
 
 
     std::string str(buffer);
-    cout << buffer << endl;
+    //cout << buffer << endl;
     int index = str.find(" ");
     string str1 = str.substr(0, index);
     string str2 = str.substr(index + 1);
@@ -311,60 +238,9 @@ void * Server :: handleClient  (void * clientObj) {
 
     commandsManager.executeCommand(str1, as);
     pthread_exit(NULL);
-    //s->server->commands_Manager_->executeCommand(str1, as);
 
-    //older possible implemention of handle client
-    /**
-    unsigned int size = sizeof(struct sockaddr_in);
-    char buffer[4096];
-    bzero((void *) &buffer, sizeof(buffer));
-    //int arg1;
-    int bytes;
-    int sentbytes;
 
-    int i = 2;
-    bool endFlag = false;
-    while (!endFlag) {
-        if (i % 2 == 0) {
-            bytes = read(clientSocket1, buffer, sizeof(buffer));
-            endFlag = isClosed(bytes);
-            if (strcmp(buffer, "END") != 0 && !endFlag) {
-                if (strcmp(buffer, "no_available_moves") != 0) {
-                    sentbytes = write(clientSocket2, buffer, sizeof(buffer));
-                    endFlag = isClosed(sentbytes);
-                    bzero((void *) &buffer, sizeof(buffer));
-                } else {
-                    i++;
-                    continue;
-                }
-            } else {
-                endFlag = true;
-            }
-        } else {
-            bytes = read(clientSocket2, buffer, sizeof(buffer));
-            endFlag = isClosed(bytes);
 
-            if (strcmp(buffer, "END") != 0 && !endFlag) {
-                if (strcmp(buffer, "no_available_moves") != 0) {
-                    sentbytes = write(clientSocket1, buffer, sizeof(buffer));
-                    endFlag = isClosed(sentbytes);
-
-                    bzero((void *) &buffer, sizeof(buffer));
-                } else {
-                    i++;
-                    continue;
-                }
-            } else {
-                endFlag = true;
-            }
-        }
-        //bzero((void *)&buffer, sizeof(buffer));
-
-        i++;
-    }
-    cout << "end of game!"<< endl;
-    //    delete(buff);
-     */
 }
 
 

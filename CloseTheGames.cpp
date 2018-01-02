@@ -9,6 +9,10 @@ CloseTheGames :: CloseTheGames(Server * server) {
     this->s = s;
 }
 
+/**
+ * going over the games and closing each one of them.
+ * @param args nothing is args.
+ */
 void CloseTheGames :: execute(vector<string> args) {
     CommandsManager commandsManager (this->s);
     GameManager *gm = GameManager::getInstance();
