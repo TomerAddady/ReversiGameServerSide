@@ -8,8 +8,17 @@ CMakeFiles/server.dir/CloseCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o
+ /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.cpp
+ /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
 CMakeFiles/server.dir/CommandsManager.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h

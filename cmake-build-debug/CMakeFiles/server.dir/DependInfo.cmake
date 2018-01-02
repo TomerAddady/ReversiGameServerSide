@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.cpp" "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/CloseCommand.cpp.o"
+  "/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.cpp" "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/CloseTheGames.cpp.o"
   "/home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp" "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/CommandsManager.cpp.o"
   "/home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp" "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/GameManager.cpp.o"
   "/home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp" "/home/tomer/Documents/advancedProgramingExerises/src/server/cmake-build-debug/CMakeFiles/server.dir/Game_Room.cpp.o"

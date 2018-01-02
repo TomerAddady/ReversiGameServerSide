@@ -1,7 +1,7 @@
 //
 // Created by tomer on 24/12/17.
 //
-
+#include "CloseTheGames.h"
 #include "CommandsManager.h"
 #include "StartCommand.h"
 #include "JoinCommand.h"
@@ -16,6 +16,8 @@ CommandsManager::CommandsManager(Server * s) {
     commandsMap["list_games"] = new GetGamesListCommand(s);
     commandsMap["close"] = new CloseCommand(s);
     commandsMap["play"] = new PlayCommand();
+    commandsMap["exit"] = new CloseTheGames(s);
+
 }
 
 CommandsManager::~CommandsManager() {

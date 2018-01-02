@@ -90,6 +90,12 @@
 		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Command.h">
 			<Option target="server"/>
 		</Unit>

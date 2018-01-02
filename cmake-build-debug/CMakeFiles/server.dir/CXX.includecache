@@ -18,6 +18,20 @@ Server.h
 Command.h
 /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
 
+/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.cpp
+CloseTheGames.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
+GameManager.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
+CommandsManager.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h
+
+/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
+Command.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
+Server.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+
 /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
 vector
 -
@@ -25,6 +39,8 @@ string
 -
 
 /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.cpp
+CloseTheGames.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
 CommandsManager.h
 /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h
 StartCommand.h

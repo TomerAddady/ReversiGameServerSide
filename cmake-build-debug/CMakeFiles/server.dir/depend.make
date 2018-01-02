@@ -8,7 +8,16 @@ CMakeFiles/server.dir/CloseCommand.cpp.o: ../GameManager.h
 CMakeFiles/server.dir/CloseCommand.cpp.o: ../Game_Room.h
 CMakeFiles/server.dir/CloseCommand.cpp.o: ../Server.h
 
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../CloseTheGames.cpp
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../CloseTheGames.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../Command.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../CommandsManager.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../GameManager.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../Game_Room.h
+CMakeFiles/server.dir/CloseTheGames.cpp.o: ../Server.h
+
 CMakeFiles/server.dir/CommandsManager.cpp.o: ../CloseCommand.h
+CMakeFiles/server.dir/CommandsManager.cpp.o: ../CloseTheGames.h
 CMakeFiles/server.dir/CommandsManager.cpp.o: ../Command.h
 CMakeFiles/server.dir/CommandsManager.cpp.o: ../CommandsManager.cpp
 CMakeFiles/server.dir/CommandsManager.cpp.o: ../CommandsManager.h

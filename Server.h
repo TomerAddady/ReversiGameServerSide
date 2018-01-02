@@ -26,6 +26,7 @@ public:
     int writeTo(int sd, const string& msg);
     int ReadFrom(int sd, char * buffer);
     int Killthreads ();
+    int closeServer ();
 private:
     vector<pthread_t *> projectThreads;
     int port;
@@ -38,7 +39,7 @@ private:
     //  int calc(int arg1, const char op, int arg2) const;
 };
 
-typedef struct connectioObj {
+typedef struct connectioObj{
     int sd; // socket descriptor
     Server * server;
 };

@@ -12,11 +12,11 @@ using namespace std;
 
 class CommandsManager {
     public:
-    CommandsManager(Server * s);
-    ~CommandsManager();
-    void executeCommand(string command, vector<string> args);
+        CommandsManager(Server * s);
+        ~CommandsManager();
+        void executeCommand(string command, vector<string> args);
     private:
-    map<string, Command*> commandsMap;
+        map<string, Command*> commandsMap;
 };
 
 

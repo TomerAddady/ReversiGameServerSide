@@ -150,6 +150,33 @@ CloseCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/CloseCommand.cpp.s
 .PHONY : CloseCommand.cpp.s
 
+CloseTheGames.o: CloseTheGames.cpp.o
+
+.PHONY : CloseTheGames.o
+
+# target to build an object file
+CloseTheGames.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/CloseTheGames.cpp.o
+.PHONY : CloseTheGames.cpp.o
+
+CloseTheGames.i: CloseTheGames.cpp.i
+
+.PHONY : CloseTheGames.i
+
+# target to preprocess a source file
+CloseTheGames.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/CloseTheGames.cpp.i
+.PHONY : CloseTheGames.cpp.i
+
+CloseTheGames.s: CloseTheGames.cpp.s
+
+.PHONY : CloseTheGames.s
+
+# target to generate assembly for a file
+CloseTheGames.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/CloseTheGames.cpp.s
+.PHONY : CloseTheGames.cpp.s
+
 CommandsManager.o: CommandsManager.cpp.o
 
 .PHONY : CommandsManager.o
@@ -405,6 +432,9 @@ help:
 	@echo "... CloseCommand.o"
 	@echo "... CloseCommand.i"
 	@echo "... CloseCommand.s"
+	@echo "... CloseTheGames.o"
+	@echo "... CloseTheGames.i"
+	@echo "... CloseTheGames.s"
 	@echo "... CommandsManager.o"
 	@echo "... CommandsManager.i"
 	@echo "... CommandsManager.s"

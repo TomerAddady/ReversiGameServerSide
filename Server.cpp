@@ -36,24 +36,48 @@ Server :: ~Server() {
 
 void Server::run() {
 
+
+
+    this->serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (this->serverSocket == -1) {
+        throw ("error while creating socket!");
+    }
+    // Assign a local address to the socket
+    struct sockaddr_in serverAddress;
+    bzero((void *) &serverAddress, sizeof(serverAddress));
+
+    serverAddress.sin_family = AF_INET;
+    serverAddress.sin_addr.s_addr = INADDR_ANY;
+    serverAddress.sin_port = htons(this->port);
+
+    if (bind(this->serverSocket, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) < 0) {
+        throw "Error on binding";
+    }
+
+    listen(this->serverSocket, MAX_CONNECTED_CLIENTS);
+
     pthread_t startThread;
     this->projectThreads.push_back(&startThread);
     pthread_create(&startThread, NULL, start, (void *)this);
+
 
     string command = "";
     while (command != "exit") {
         cin >> command;
     }
 
-    cout << "kill all threads:" << endl;
-    // close all threads
-    //pthread_mutex_lock(&threads_mutex);
-    this->Killthreads();
 
-    //pthread_mutex_unlock(&threads_mutex);
 
 }
 
+
+int Server ::closeServer() {
+    CommandsManager commandsManager (this);
+    vector <string> vec1;
+    commandsManager.executeCommand("exit",vec1);
+    close(this->serverSocket);
+    this->Killthreads();
+}
 /**
  * Start the server.
  */
@@ -61,7 +85,7 @@ void *Server::start(void * clientObj) {
     cout << "in"<< endl;
     Server *s = (Server *) clientObj;
     // Create a socket point
-
+/*
     s->serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (s->serverSocket == -1) {
         throw ("error while creating socket!");
@@ -79,7 +103,7 @@ void *Server::start(void * clientObj) {
     }
 
     listen(s->serverSocket, MAX_CONNECTED_CLIENTS);
-
+*/
     //pthread_t exitThread;
     //s->projectThreads.push_back(&exitThread); // adding the thread to server treads vector.
     //pthread_create(&exitThread, NULL, waitTillExit, (void *)s);

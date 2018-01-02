@@ -38,7 +38,6 @@ void JoinCommand :: execute(vector<string> args) {
             this->s->closeConnection(sd);
             return;
         }*/
-
         game_room->JoinThegame(sd, this->s);
         GameObj * parToGame = new GameObj;
         parToGame->gameRoom = game_room;
@@ -47,11 +46,7 @@ void JoinCommand :: execute(vector<string> args) {
         pthread_create(&thread, NULL, Game_Room::manageTheGame, (void *)parToGame);// open new one to the game.
     }
     pthread_exit(NULL); // close the older pthread.
-
     //pthread_create(parToGame->gameRoom->getThread(), NULL ,parToGame->gameRoom->manageTheGame, (void *)parToGame);
-
-
 }
 JoinCommand :: ~JoinCommand() {
-
 }
