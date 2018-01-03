@@ -39,9 +39,9 @@ private:
     //  int calc(int arg1, const char op, int arg2) const;
 };
 
-typedef struct connectioObj{
+typedef struct structForCon{
     int sd; // socket descriptor
     Server * server;
-};
+}connectioObj;
 
 #endif //SERVER3_SERVER_H

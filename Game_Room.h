@@ -26,12 +26,12 @@ class Game_Room {
         int getStatus();
         string getName() const ;
         pthread_t *getThread() const;
-
+        int isActive ();
 
 };
 
-typedef struct GameObj {
+typedef struct structForGame {
     Server * server; // socket descriptor
     Game_Room * gameRoom;
-};
+}GameObj;
 #endif //SERVER_GAME_ROOM_H

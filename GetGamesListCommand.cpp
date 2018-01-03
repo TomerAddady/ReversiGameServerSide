@@ -15,7 +15,6 @@ GetGamesListCommand :: ~GetGamesListCommand() {
 }
 
 void GetGamesListCommand :: execute(vector<string> args) {
-    cout << "innnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" << endl;
     int sd;
     istringstream istringstream1(args.at(0));
     istringstream1 >> sd;
@@ -26,14 +25,17 @@ void GetGamesListCommand :: execute(vector<string> args) {
     // for all names write them to the client.
     for (vector <string> :: iterator iterator1 = s.begin(); iterator1 != s.end(); iterator1++ ) {
         try {
-            this->s->writeTo(sd , (*iterator1).c_str());
+            Game_Room * game_room = gameManager->GetGameByName(*iterator1);
+            if (game_room->isActive() == 0) { // only if the game is not active.
+                this->s->writeTo(sd, (*iterator1).c_str());
+            }
 
         } catch (const char * c) {
             this->s->closeConnection(sd);
             return;
         }
     }
-    char* s1 = "endLoop";
+    char s1[8] = "endLoop";
 
     this->s->writeTo(sd , s1);
     this->s->closeConnection(sd);// close connection after sending answer.

@@ -19,6 +19,12 @@ Game_Room :: Game_Room(int s1, string name) {
     this->status = 0; // game not active yet.
 }
 
+
+int Game_Room :: isActive () {
+    return this->status;
+}
+
+
 /**
  * @return the current thread.
  */
