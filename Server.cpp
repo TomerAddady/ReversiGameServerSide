@@ -17,6 +17,7 @@
 //#include "arpa/inet.h"
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
+#define MAX_THREADS 5
 pthread_mutex_t ListOfThreadsMutex;
 
 
@@ -24,8 +25,8 @@ pthread_mutex_t ListOfThreadsMutex;
  * Constractor.
  * @param port - we get number of the port.
  */
-Server::Server(int port): port(port), serverSocket(0) {
-   // this->commands_Manager_ = new CommandsManager();
+Server::Server(int port): port(port), threadPool_(ThreadPool(MAX_THREADS)), serverSocket(0) {
+
     cout << "Server" << endl;
     this->shuoldRun = true;
 }
@@ -122,7 +123,7 @@ void *Server::start(void * clientObj) {
      */
     struct sockaddr_in client;
     socklen_t clienLen = sizeof((struct sockaddr *)&client);
-
+    int i = 1;
     while (true) {
 
         cout << "Waiting for client connections..." << endl;
@@ -137,7 +138,9 @@ void *Server::start(void * clientObj) {
          */
         pthread_t threads;
         s->projectThreads.push_back(&threads); // adding the thread to server treads vector.
-        pthread_create(&threads, NULL, handleClient, (void *)s1);
+        //pthread_create(&threads, NULL, handleClient, (void *)s1); // older - before thread pool
+        s->threadPool_.addTask(new Task(handleClient, (void *)s1));
+        cout << "added " << i << endl;
     }
 
 }
@@ -237,13 +240,18 @@ void * Server :: handleClient  (void * clientObj) {
     as.push_back(str2); // name of game.
 
     commandsManager.executeCommand(str1, as);
-    pthread_exit(NULL);
+   // pthread_exit(NULL);
 
 
 
 }
-
-
+/**
+ * adding a task to the pool.
+ * @param task the task we are going to add.
+ */
+void Server  :: addTaskToThreadPool (Task * task) {
+    this->threadPool_.addTask(task);
+}
 
 bool Server  :: isClosed (int c) {
     if (c == -1) {

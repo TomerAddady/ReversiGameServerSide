@@ -8,6 +8,8 @@ CMakeFiles/server.dir/CloseCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/CloseTheGames.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
@@ -16,6 +18,8 @@ CMakeFiles/server.dir/CloseTheGames.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/CommandsManager.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/CloseCommand.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/CloseTheGames.h
@@ -27,11 +31,15 @@ CMakeFiles/server.dir/CommandsManager.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/GameManager.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/Game_Room.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h
@@ -39,6 +47,8 @@ CMakeFiles/server.dir/Game_Room.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/GetGamesListCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
@@ -46,6 +56,8 @@ CMakeFiles/server.dir/GetGamesListCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/GetGamesListCommand.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/JoinCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
@@ -53,6 +65,8 @@ CMakeFiles/server.dir/JoinCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/JoinCommand.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/PlayCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/PlayCommand.cpp
@@ -62,6 +76,8 @@ CMakeFiles/server.dir/Server.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/CommandsManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/StartCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
@@ -69,8 +85,16 @@ CMakeFiles/server.dir/StartCommand.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp
  /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
+CMakeFiles/server.dir/ThreadPool.cpp.o
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.cpp
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 CMakeFiles/server.dir/main.cpp.o
  /home/tomer/Documents/advancedProgramingExerises/src/server/GameManager.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Game_Room.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+ /home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
  /home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp

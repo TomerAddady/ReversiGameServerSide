@@ -157,6 +157,8 @@ vector
 -
 iostream
 /home/tomer/Documents/advancedProgramingExerises/src/server/iostream
+ThreadPool.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
 
 /home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.cpp
 sstream
@@ -171,6 +173,24 @@ Command.h
 /home/tomer/Documents/advancedProgramingExerises/src/server/Command.h
 Server.h
 /home/tomer/Documents/advancedProgramingExerises/src/server/Server.h
+
+/home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
+
+/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.cpp
+zconf.h
+-
+iostream
+-
+ThreadPool.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
+
+/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h
+queue
+-
+pthread.h
+-
+Task.h
+/home/tomer/Documents/advancedProgramingExerises/src/server/Task.h
 
 /home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp
 iostream

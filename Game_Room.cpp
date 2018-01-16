@@ -44,6 +44,7 @@ string Game_Room::getName() const  {
  * @return .
  */
 void * Game_Room::manageTheGame (void * game_obj) {
+    cout<< "innnnnnnnnnnnnnnnnnnnnn gameeeee"<<endl;
     GameObj * gameObj = (GameObj *) game_obj;
     Game_Room * gr = gameObj->gameRoom;
     Server * s = gameObj->server;

@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "iostream"
+#include "ThreadPool.h"
 using namespace std;
 //#include "CommandsManager.h"
 //using namespace std;
@@ -25,6 +26,7 @@ public:
     void closeConnection (int sd);
     int writeTo(int sd, const string& msg);
     int ReadFrom(int sd, char * buffer);
+    void addTaskToThreadPool (Task * task);
     int Killthreads ();
     int closeServer ();
 private:
@@ -32,6 +34,7 @@ private:
     int port;
     int serverSocket;// the socket's file descriptor
  //   CommandsManager * commands_Manager_;
+    ThreadPool threadPool_;
     bool isClosed (int c);
     bool shuoldRun;
 

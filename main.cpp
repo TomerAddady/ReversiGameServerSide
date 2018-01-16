@@ -12,7 +12,7 @@ using namespace std;
 int  main(int argc, char ** argv) {
 
     ifstream configFile;
-    configFile.open("configuratin_for_server.txt"); //optional path...
+    configFile.open("../configuratin_for_server.txt"); //optional path...
 
     // configFile.open("/home/tomer/CLionProjects/fromTomerMail/done/homeWork/ex3/configuration_for_client.txt");
     int port;

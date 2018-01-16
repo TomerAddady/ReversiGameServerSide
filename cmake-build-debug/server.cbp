@@ -147,6 +147,15 @@
 		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/StartCommand.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/Task.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/ThreadPool.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/tomer/Documents/advancedProgramingExerises/src/server/main.cpp">
 			<Option target="server"/>
 		</Unit>

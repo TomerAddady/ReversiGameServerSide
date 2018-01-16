@@ -6,7 +6,7 @@
 #include "JoinCommand.h"
 #include "GameManager.h"
 JoinCommand :: JoinCommand(Server * server) {
-    this->s = s;
+    this->s = server;
 }
 /**
  * inserting the other player to the requsted game.
@@ -37,9 +37,12 @@ void JoinCommand :: execute(vector<string> args) {
         parToGame->gameRoom = game_room;
         parToGame->server = this->s;
         pthread_t thread;
-        pthread_create(&thread, NULL, Game_Room::manageTheGame, (void *)parToGame);// open new one to the game.
+       // pthread_create(&thread, NULL, Game_Room::manageTheGame, (void *)parToGame);// open new one to the game.
+      //  this->s->addTaskToThreadPool(new Task(parToGame->gameRoom->manageTheGame, (void *)parToGame));
+        this->s->addTaskToThreadPool(new Task(Game_Room::manageTheGame, (void *)parToGame));
+
     }
-    pthread_exit(NULL); // close the older pthread.
+   // pthread_exit(NULL); // close the older pthread.
 }
 JoinCommand :: ~JoinCommand() {
 }
